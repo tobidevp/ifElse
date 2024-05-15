@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="nobita" src="https://upload.wikimedia.org/wikipedia/vi/2/2c/Nobita.png" style="position:absolute;left:0; top:0;" height="100" width="80"/>
+</body>
+<script>
+    document.onkeydown = (e) => {
+        switch(e.code) {
+            case "ArrowUp":
+                up()
+                break;
+            case "ArrowDown":
+                down()
+                break;
+            case "ArrowLeft":
+                left()
+                break;
+            case "ArrowRight":
+                right()
+                break;
+        }
+    }
+    function up() {
+        let nobita = document.getElementById("nobita");
+        nobita.style.top = parseInt(nobita.style.top) - 50 + "px";
+    }
+    function down() {
+        let nobita = document.getElementById("nobita");
+        nobita.style.top = parseInt(nobita.style.top) + 50 + "px";
+    }
+    function left() {
+        let nobita = document.getElementById("nobita");
+        nobita.style.left = parseInt(nobita.style.left) - 50 + "px";
+    }
+    function right() {
+        let nobita = document.getElementById("nobita");
+        nobita.style.left = parseInt(nobita.style.left) + 50 + "px";
+    }
+</script>
+</html>
