@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+       <div>
+            <input id="check1" type="radio" name="a" checked>
+            
+            <input id="check2" type="radio" name="a" >
+            
+            <h3>Good</h3>
+       </div>
+        <br><br>
+                <input id="check11" type="radio" name="b"checked>
+
+                <input id="check22" type="radio" name="b" >
+                
+                <h3>Cheap</h3>
+
+        <br><br>
+                <input id="check111" type="radio" name="c" checked>
+                
+
+                <input id="check222" type="radio" name="c" >
+                
+                <h3>Fast</h3>
+
+    </div>
+</body>
+<script>
+    document.querySelectorAll('input[type="radio"]').forEach((checkbox) => {
+            checkbox.addEventListener('change', () => {
+                let check1 = document.getElementById('check1').checked;
+                let check2 = document.getElementById('check2').checked;
+                let check11 = document.getElementById('check11').checked;
+                let check22 = document.getElementById('check22').checked;
+                let check111 = document.getElementById('check111').checked;
+                let check222 = document.getElementById('check222').checked;
+                if (check222 == true && check2 == true) {
+                    document.getElementById('check11').checked = true;
+                    document.getElementById('check22').checked = false;
+                } else if (check222 && !check22) {
+                    document.getElementById('check1').checked = false;
+                    document.getElementById('check2').checked = true;
+                } 
+                if (check222 && check22) {
+                    document.getElementById('check1').checked = true;
+                    document.getElementById('check2').checked = false;
+                }
+            });
+        });
+    
+</script>
+<style>
+</style>
+</html>

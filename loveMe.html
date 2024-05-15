@@ -6,11 +6,10 @@
     <title>Document</title>
 </head>
 <body>
-    <center>
+    
         <h1>Do you love me?</h1>
         <button onclick="yes()">Yes</button>
         <button onmousemove="no()" style="position: relative; top: 0; left: 0;" id="a">No</button>
-    </center>
 </body>
 <script>
     function yes()
@@ -19,8 +18,8 @@
     }
     function no()
     {
-        var x = Math.round(Math.random() * 500);
-        var y = Math.round(Math.random() * 500);
+        var x = Math.round(Math.random() * window.innerWidth);
+        var y = Math.round(Math.random() * window.innerHeight);
         document.getElementById('a').style.left = x + 'px';
         document.getElementById('a').style.top = y + 'px';
     }
